@@ -1,0 +1,96 @@
+{
+  "import-RN": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "import native",
+    "body": "import { $1 } from 'react-native';",
+    "description": "import react-native"
+  },
+  "import-R-alone": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "import react alone",
+    "body": "import * as React from 'react';",
+    "description": "import react"
+  },
+  "import-styled": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "import styled",
+    "body": "import styled from 'styled-components';",
+    "description": "import styled-components"
+  },
+  "import-lodash": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "import lodash",
+    "body": "import _ from 'lodash';",
+    "description": "import lodash"
+  },
+
+  "loglevel": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "import loglevel",
+    "body": "import log from 'loglevel';",
+    "description": "import loglevel"
+  },
+  "debug-log": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "log",
+    "body": "log.debug('$1', JSON.stringify($1, null, 2))",
+    "description": "debug log"
+  },
+  "network-log": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "logthencatch",
+    "body": [
+      ".then(r => { log.debug(JSON.stringify(r, null, 2)); return r; })",
+      ".catch(e => { log.error(e); throw e; });"
+    ],
+    "description": "log then or/and catch"
+  },
+
+  "effect-hook": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "useeffect",
+    "body": [
+      "React.useEffect(() => {",
+      "  $1",
+      "},",
+      "[$2]);"
+    ],
+    "description": "util for extracting hydra member"
+  },
+
+  "dispatch": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "dispatcher",
+    "body": [
+      "import { useDispatch } from 'react-redux';",
+      "const dispatch = useDispatch();"
+    ],
+    "description": "import dispatcher"
+  },
+
+  "component": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "component,func",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "// import { Container } from './$1.styled';",
+      "",
+      "export function $1() {",
+      "",
+      "  return (",
+      "    <Container>HEY</Container>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "basic react component"
+  },
+
+  "zwitsal": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "zwitsal import",
+    "body": "import { $1 } from 'zwitsal-babynamen-components';",
+    "description": "util accessing the library"
+  }
+}
