@@ -4,6 +4,7 @@
     ":followTag(typescript, next)"
   ],
   "commitBody": "[skip ci]",
+  "commitMessageSuffix": "[skip netlify]",
   "requiredStatusChecks": null,
   "lockFileMaintenance": {
     "enabled": true
@@ -14,17 +15,18 @@
       "automerge": true
     },
     {
-      "packagePatterns": [
-        "*"
-      ],
+      "packagePatterns": ["*"],
       "rangeStrategy": "pin"
     },
     {
       "depTypeList": [
         "engines",
-        "peerDependencies",
-        "resolutions"
+        "peerDependencies"
       ],
+      "rangeStrategy": "widen"
+    },
+    {
+      "depTypeList": ["resolutions"],
       "rangeStrategy": "auto"
     }
   ]
