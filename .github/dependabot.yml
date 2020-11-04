@@ -13,6 +13,8 @@ updates:
       day: "sunday"
     commit-message:
       prefix: "[skip netlify]"
+    ignore:
+      - dependency-name: "typescript"
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
