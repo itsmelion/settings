@@ -1,8 +1,8 @@
 {
   "extends": [
     "config:base",
-    ":followTag(typescript, beta)",
-    ":followTag(eslint-config-lion, next)"
+    ":followTag(typescript, latest)",
+    ":followTag(eslint-config-lion, latest)"
   ],
   "commitBody": "[skip ci]",
   "commitMessageSuffix": "[skip netlify]",
