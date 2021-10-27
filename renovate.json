@@ -29,6 +29,10 @@
     {
       "depTypeList": ["resolutions"],
       "rangeStrategy": "auto"
+    },
+    {
+      "matchPackageNames": ["eslint"],
+      "rangeStrategy": "widen"
     }
   ]
 }
