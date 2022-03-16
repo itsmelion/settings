@@ -17,7 +17,7 @@
     },
     {
       "packagePatterns": ["*"],
-      "rangeStrategy": "pin"
+      "rangeStrategy": "replace"
     },
     {
       "depTypeList": [
